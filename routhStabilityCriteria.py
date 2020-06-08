@@ -41,6 +41,9 @@ def generateRouthArray(den):
 
 
 def checkStability(den):
+	if den[len(den)-2]==0 and den[len(den)-1]==0:
+		print('System Unstable due to multiple poles at origin! Get back to work!')
+		return False
 	flag = 0
 	rowArray = generateRouthArray(den)
 	print(rowArray)
